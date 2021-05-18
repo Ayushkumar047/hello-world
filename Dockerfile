@@ -3,4 +3,4 @@ FROM tomcat:8-jre8
 
 # Maintainer 
 MAINTAINER "valaxytech@gmail.com" 
-COPY *.war /usr/local/tomcat/webapps/dockeransible.war
+COPY . /usr/local/tomcat/webapps/dockeransible.war
