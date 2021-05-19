@@ -9,7 +9,7 @@
     - name: Start docker
       service:
         name: docker
-        state: present
+        state: started
         enabled: Yes
     - name: Start docker container
       docker_container:
