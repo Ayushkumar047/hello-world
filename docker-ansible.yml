@@ -2,6 +2,10 @@
 - hosts: dev
   become: True
   tasks:
+    - name: Install python pip
+      yum:
+        name: python-pip
+        state: present
     - name: Install docker
       yum:
         name: docker
@@ -11,6 +15,10 @@
         name: docker
         state: started
         enabled: Yes
+    - name: Install docker-py python module
+      pip:
+        name: docker-py
+        state: present
     - name: Start docker container
       docker_container:
         name: ansibledemo
